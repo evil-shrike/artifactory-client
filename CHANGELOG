@@ -1,0 +1,26 @@
+# Change Log
+
+## [Unreleased]
+### Added
+- API: setAuth
+- API: getNpmConfig
+- API: getEncryptedPassword
+- API: getFileInfo (borrowed from artifactory-api)
+- API: getFolderInfo
+- API: isPathExists (borrowed from artifactory-api)
+- API: uploadFile (borrowed from artifactory-api)
+- API: downloadFile (borrowed from artifactory-api)
+- API: downloadFolder
+- API: createFolder
+- API: deleteFolder
+- API: deleteFile
+- API: moveItem
+- API: moveItems
+- CLI: base CLI tools (url, auth, bootsstrapping)
+- CLI: commands: encrypt
+- CLI: commands: npm-config
+- CLI: commands: setup npm
+
+### Changed
+### Removed
+### Fixed

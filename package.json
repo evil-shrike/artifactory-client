@@ -1,0 +1,36 @@
+{
+  "name": "artifactory-client",
+  "version": "0.1.0",
+  "description": "A client lib and CLI tool for interacting with Artifactory",
+  "main": "main.js",
+  "bin": { "art-client": "cli/cli.js" },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crocinc/artifactory-client.git"
+  },
+  "homepage": "https://github.com/crocinc/artifactory-client",
+  "bugs": {
+    "url": "https://github.com/crocinc/artifactory-client/issues"
+  },
+  "author": {
+    "name": "Sergei Dorogin",
+    "url": "http://about.dorogin.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "Artifactory",
+    "REST API",
+    "REST",
+    "API",
+    "Client",
+    "Javascript",
+    "js"
+  ],
+  "dependencies": {
+    "md5-file": "^3.1.1",
+    "q": "1.4.1",
+    "request": "^2.74.0",
+    "underscore": "1.8.3",
+    "yargs": "^5.0.0"
+  }
+}
