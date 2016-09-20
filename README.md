@@ -1,10 +1,48 @@
 # Overview
-The artifactory-client module provides API of working with [Artifactory](https://www.jfrog.com/artifactory/) via its [REST API](http://www.jfrog.com/confluence/display/RTF/Artifactory+REST+API).  
+The artifactory-client module provides API for working with [Artifactory](https://www.jfrog.com/artifactory/) via its [REST API](http://www.jfrog.com/confluence/display/RTF/Artifactory+REST+API).  
 Also the module provides CLI tool (`art-client`).  
 
 > The package in based on [artifactory-api](https://www.npmjs.com/package/artifactory-api) package by Christian Adam.
 
 # CLI usage
+
+Run `art-client` without arguments or with `-h` to get help.
+
+The tool provides a bunch of commands. To see help for particular command run:  
+ `art-client <command> -h`.
+
+Common parameters for all commands are:
+* url - base url of Artifactory
+* user (u) - user name
+* password (p) - user password (plain or encrypted)
+```
+art-client <command> --url https://artifacts.company.com/ -u user -p pwd
+```
+
+## encrypt
+Encrypt a password for a user. The encrypted password can be used as a normal password in `password` parameter. In Artifactory it's called as "Centrally Secure Passwords" - see details in the [documentation](https://www.jfrog.com/confluence/display/RTF/Centrally+Secure+Passwords).
+
+Usage:
+```
+art-client encrypt --url https://artifacts.company.com/ -u user -p pwd
+```
+
+
+## setup
+Setup a repository for different tools (it depend on repository type).  
+Usage: `art-client setup <type>`
+where type is: npm, nuget (not yet), bower (not yet).
+
+### subcommands 
+#### setup npm
+Setup npm repository. It can be a global registry, i.e. a registry to use by default, or a scoped registry.
+Usage:
+```
+art-client setup npm <repo> [scope]
+```
+If a scope is supplied then it'll be set up a scoped registry. Otherwise a global. By default the command creates a `.npmrc` file in the current directory. You can pass `-g` flag to change `.npmrc` in user profile via `npm config` command.
+
+
 
 # Programmatic usage
 
