@@ -16,22 +16,3 @@ exports.builder = function (yargs) {
   //return yargs.commandDir('remote_cmds')
 }
 exports.handler = function (argv) {}
-/*
-{
-  console.log('Retriving npm-config (.npmrc) for repo ' + argv.repo + (argv.scope ? " and scope " + argv.scope : ""));
-
-  var client = new ArtClient(argv.url);
-  client.getNpmConfig(argv.user, argv.password, argv.repo, argv.scope).then(function (result) {
-    console.log('OK');
-    console.log(result);
-    process.exit(0);
-  }).catch(function (err) {
-    console.log('Fail');
-    console.log(err);
-    process.exit(1);
-  });
-
-}
-
-
-*/

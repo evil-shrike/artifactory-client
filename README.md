@@ -51,8 +51,9 @@ If a scope is supplied then it'll be set up a scoped registry. Otherwise a globa
 For interacting with Artifactory you need to create a instance of ArtifactoryClient with the base url of your Artifactory server.  
 If base url of your Artifactory instance includes a path you need to include it as well.  
 ```js
-constructor(url: string, options?)
+constructor(url: string, options?);
 ```
+
 Options:
 * strictSSL
 Type: boolean
@@ -60,6 +61,7 @@ Default: false
 
 
 Examples:
+
 ```javascript
 var artifactory = new ArtifactoryClient('https://artifacts.company.org');
 ```
@@ -70,20 +72,22 @@ var artifactory = new ArtifactoryClient('https://artifacts.company.org/artifacto
 
 
 ### Authentication
-You need to provide basic http credentials when creating a new instance. Just provide username:password in base 64.
-* Hint: you can quickly obtain the base64 of any string by opening a Chrome browser and typing this in the developer console:
+If your Artifactory requires authentication (probably it does) you'll need to set up credentials.
+That should be done via `setAuth` method.
+You can pass a value of username:password in base 64 or username and password separetely.
 
-  ```javascript
-  btoa('user:password') //prints: "dXNlcjpwYXNzd29yZA=="
-  ```
-
-  Usage example:
+Example:
 
 ```javascript
 var artifactory = new ArtifactoryClient('https:<myServerURL>');
 artifactory.setAuth("dXNlcjpwYXNzd29yZA==")
 // or:
 artifactory.setAuth("user", "password");
+```
+
+Hint: you can quickly obtain the base64 of any string by opening a Chrome browser and typing this in the developer console:
+```javascript
+btoa('user:password') //prints: "dXNlcjpwYXNzd29yZA=="
 ```
 
 
