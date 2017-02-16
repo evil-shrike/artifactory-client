@@ -55,9 +55,9 @@ constructor(url: string, options?);
 ```
 
 Options:
-* strictSSL
-Type: boolean
-Default: false
+* strictSSL  
+Type: boolean  
+Default: false  
 
 
 Examples:
@@ -72,9 +72,9 @@ var artifactory = new ArtifactoryClient('https://artifacts.company.org/artifacto
 
 
 ### Authentication
-If your Artifactory requires authentication (probably it does) you'll need to set up credentials.
-That should be done via `setAuth` method.
-You can pass a value of username:password in base 64 or username and password separetely.
+If your Artifactory requires authentication (probably it does) you'll need to set up credentials.  
+This should be done via `setAuth` method.  
+You can pass a value of username:password in base64 or username and password separately.
 
 Example:
 
@@ -92,7 +92,7 @@ btoa('user:password') //prints: "dXNlcjpwYXNzd29yZA=="
 
 
 ## API
-All actions return a [Q Promise](https://github.com/kriskowal/q).
+All actions return a [Promise](https://github.com/petkaantonov/bluebird).
 
 ### getNpmConfig
 TODO
