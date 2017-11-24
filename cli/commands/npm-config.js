@@ -10,7 +10,7 @@ exports.builder = function (yargs) {
   return yargs
     //.usage('Usage: art-client npm-config [options]')
     //.demand(['repo'])
-    .example('art-client npm-config repo croc --url https://artifacts.company.com/ -u user -p pwd');
+    .example('art-client npm-config repo scope --url https://artifacts.company.com/ -u user -p pwd');
 
   //return yargs.commandDir('remote_cmds')
 }

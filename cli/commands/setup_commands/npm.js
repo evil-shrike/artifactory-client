@@ -13,7 +13,7 @@ exports.builder = function (yargs) {
       alias: 'g',
       desc: 'setup .npmrc in user profile (otherwise in current folder)'
     })
-    .example('art-client npm-config repo croc --url https://artifacts.company.com/ -u user -p pwd');
+    .example('art-client npm-config repo rnd --url https://artifacts.company.com/ -u user -p pwd');
 
   //return yargs.commandDir('remote_cmds')
 }
@@ -47,14 +47,13 @@ function runNpmConfig(result) {
       var args = ["config", "set"];
       args.push(key);
       args.push(value);
-      if (argv.global) {
-        args.push("-g");
-      }
+      args.push("-g");
       console.log(args.join(","));
       var child = child_process.spawnSync("npm.cmd", args, {cwd:"."});
       if (child.status == 0) {
-        console.log(child.stdout.toString());
       } 
+      console.log(child.stdout.toString());
+      console.log(child.stderr.toString());
     }
   });
 }

@@ -17,11 +17,8 @@ exports.handler = function (argv) {
     console.log(result);
     process.exit(0);
   }).catch(function (err) {
-    console.log('Fail');
+    console.log('Failed');
     console.log(err);
     process.exit(1);
   });
-
 }
-
-

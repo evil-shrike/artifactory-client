@@ -8,11 +8,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/crocinc/artifactory-client.git"
+    "url": "https://github.com/evil-shrike/artifactory-client.git"
   },
-  "homepage": "https://github.com/crocinc/artifactory-client",
+  "homepage": "https://github.com/evil-shrike/artifactory-client",
   "bugs": {
-    "url": "https://github.com/crocinc/artifactory-client/issues"
+    "url": "https://github.com/evil-shrike/artifactory-client/issues"
   },
   "author": {
     "name": "Sergei Dorogin",
