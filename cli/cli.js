@@ -17,7 +17,7 @@ var conf = yargs
     .alias('v', 'version')
     .showHelpOnFail(true)
     .usage('Tool for interacting with Artifactory (http://www.jfrog.com/artifactory).\nUsage: art-client <command> [options]')
-    .example('art-client npm-config --url https://artifacts.company.com/ -u user -p pwd')
+    //.example('art-client npm-config --url https://artifacts.company.com/ -u user -p pwd')
     .config('c')
     .option('url', {
         describe: 'Artifactory base url (e.g. "https://artifacts.company.com" or "https://artifacts.company.com/artifactory")'
@@ -35,11 +35,10 @@ var conf = yargs
         describe: 'A proxy url to use for sending http requests'
     })
     .commandDir('commands')
-    //.command('npm-config', 'get .npmrc config for specified repo and scope')
     .epilog('Have fun.')
     .global(['url', 'user', 'password'])
     .demand(['url'])
-    .epilog('Copyright 2016 (c) Sergei Dorogin')
+    .epilog('Copyright 2016-2017 (c) Sergei Dorogin')
     .argv;
 
 var options = {};

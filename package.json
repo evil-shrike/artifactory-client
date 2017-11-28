@@ -4,7 +4,7 @@
   "description": "A client lib and CLI tool for interacting with Artifactory",
   "main": "main.js",
   "bin": {
-    "art-client": "cli/cli.js"
+    "art-client": "cli/cli-bin.js"
   },
   "repository": {
     "type": "git",
@@ -34,6 +34,9 @@
     "request": "^2.74.0",
     "request-promise": "^4.1.1",
     "underscore": "1.8.3",
-    "yargs": "^5.0.0"
+    "yargs": "^5.0.0",
+    "xml": "^1.0.1",
+    "xmldoc": "^1.1.0",
+    "mkdirp": "^0.5.1"
   }
 }
